@@ -1,0 +1,44 @@
+Algoritmo sin_titulo
+		m=0
+		h=0
+		Mostrar "escriba la hora inicial"
+		Leer horainicial
+		Mostrar "escriba el minuto inicial"
+		Leer minutoinicial
+		Mostrar " escriba el segundo inicial"
+		Leer segundoinicial
+		Mostrar "---------------------------"
+		Mostrar "escriba la hora final"
+		Leer horafinal
+		Mostrar "escriba el minuto final"
+		Leer minutofinal
+		Mostrar " escriba el segundo final"
+		Leer segundofinal
+		horainicialtotales=horainicial*3600
+		minutoinicialtotales=minutoinicial*60
+	totalhorainicial=horainicialtotales+minutoinicialtotales+segundoinicial
+		horafinaltotal=horafinal*3600
+		minutototalfinal=minutofinal*60
+		totalhorafinal=horafinaltotal+minutototalfinal+segundofinal
+		si totalhorainicial>totalhorafinal Entonces
+			Mostrar " la hora inicial es mayor que la final"
+		SiNo
+			totalttt=totalhorafinal-totalhorainicial
+			si totalttt>=60 Entonces
+				Mientras totalttt>=60 Hacer
+					m=m+1
+					totalttt=totalttt-60
+					si m=60 Entonces
+						m=0
+						h=h+1
+					FinSi
+				Fin Mientras
+				seg=totalttt
+				Mostrar " la diferecia es de ", h, " hora ", m," minutos ",seg," segundos"
+			SiNo
+				si totalttt>0 Entonces
+					Mostrar " paso ",totalttt," segundos"
+				FinSi
+			FinSi
+		FinSi
+FinAlgoritmo
