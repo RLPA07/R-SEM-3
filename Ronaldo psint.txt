@@ -1,44 +1,26 @@
-Algoritmo sin_titulo
-		m=0
-		h=0
-		Mostrar "escriba la hora inicial"
-		Leer horainicial
-		Mostrar "escriba el minuto inicial"
-		Leer minutoinicial
-		Mostrar " escriba el segundo inicial"
-		Leer segundoinicial
-		Mostrar "---------------------------"
-		Mostrar "escriba la hora final"
-		Leer horafinal
-		Mostrar "escriba el minuto final"
-		Leer minutofinal
-		Mostrar " escriba el segundo final"
-		Leer segundofinal
-		horainicialtotales=horainicial*3600
-		minutoinicialtotales=minutoinicial*60
-	totalhorainicial=horainicialtotales+minutoinicialtotales+segundoinicial
-		horafinaltotal=horafinal*3600
-		minutototalfinal=minutofinal*60
-		totalhorafinal=horafinaltotal+minutototalfinal+segundofinal
-		si totalhorainicial>totalhorafinal Entonces
-			Mostrar " la hora inicial es mayor que la final"
-		SiNo
-			totalttt=totalhorafinal-totalhorainicial
-			si totalttt>=60 Entonces
-				Mientras totalttt>=60 Hacer
-					m=m+1
-					totalttt=totalttt-60
-					si m=60 Entonces
-						m=0
-						h=h+1
-					FinSi
-				Fin Mientras
-				seg=totalttt
-				Mostrar " la diferecia es de ", h, " hora ", m," minutos ",seg," segundos"
-			SiNo
-				si totalttt>0 Entonces
-					Mostrar " paso ",totalttt," segundos"
-				FinSi
-			FinSi
-		FinSi
+	Algoritmo calcularTiempoTranscurrido
+		Definir horaInicial, minutoInicial, segundoInicial, horaFinal, minutoFinal, segundoFinal, totalSegundos, tiempoTranscurrido, horas, minutos, segundos Como Entero
+		
+		Escribir "Ingrese la hora inicial:"
+		Leer hInicial
+		Escribir "Ingrese los minutos iniciales:"
+		Leer mInicial
+		Escribir "Ingrese los segundos iniciales:"
+		Leer sInicial
+		
+		Escribir "Ingrese la hora final:"
+		Leer hFinal
+		Escribir "Ingrese los minutos finales:"
+		Leer mFinal
+		Escribir "Ingrese los segundos finales:"
+		Leer sFinal
+		
+		TSegundos <- ((hFinal * 3600 + mFinal * 60 + sFinal) - (hInicial * 3600 + mInicial * 60 + sInicial))
+		
+		Horas <- trunc(TSegundos / 3600)
+		Minutos <- trunc((TSegundos % 3600) / 60)
+		segundos <- TSegundos % 60
+		
+		Escribir "El tiempo transcurrido es: ", Horas, " horas ", Minutos, " minutos y ", segundos, " segundos."
 FinAlgoritmo
+
