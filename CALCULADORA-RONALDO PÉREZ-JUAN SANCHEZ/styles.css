@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/005/449/876/non_2x/mathematics-doodle-hand-drawn-school-set-vector.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.calculator {
+    background-color: #f8f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: solid;
+    border-color: ;
+}
+
+#display {
+    width: 100%;
+    padding: 10px;
+    font-size: 2rem;
+    text-align: right;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #ffffff;
+    border: solid;
+    border-color: #110e09;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    
+}
+
+button {
+    padding: 20px;
+    font-size: 1.5rem;
+    border: none;
+    background-color: #ff9100;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.9s ease-in-out;
+}
+
+button:hover {
+    color: #000;
+    background-color: #ff9100;
+    transform: rotate(360deg)
+}
